@@ -123,13 +123,14 @@ window.SITE_DATA = {
       ],
     },
     {
-      tag: "GTM Playbook",
+      tag: "Product Beta Program",
       status: "Trustpilot",
-      title: "Six seasonal launches, one rhythm",
-      blurb: "Built a repeatable launch framework spanning Design through Sales (calendars, deliverable specs, positioning frameworks, sales enablement) that scaled with the team and held milestones on time.",
+      title: "From Beta to GA ",
+      blurb: "Built a formal short-term and long-term beta outreach strategy focusing on streamlining Product, CS, and Product Marketing outreach.",
       tools: ["Launch ops", "Positioning", "Sales enablement", "Cross-functional"],
       viz: "calendar",
       brand: "Trustpilot",
+      caseStudy: "/workspaces/eleanor-portfolio/assets/Trustpilot_Beta_Case_Study.pptx.pdf",
     },
     {
       tag: "Consumer Insight",
