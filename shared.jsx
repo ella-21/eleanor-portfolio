@@ -31,7 +31,7 @@ function Nav({ current }) {
         <a href="about.html" className={current === "about" ? "active" : ""}>About</a>
         <a href="career.html" className={current === "career" ? "active" : ""}>Career</a>
         <a href="projects.html" className={current === "projects" ? "active" : ""}>Projects</a>
-        <a href="now.html" className={current === "now" ? "active" : ""}>Now</a>
+        <a href="/now" className={current === "now" ? "active" : ""}>Now</a>
         <a href="resume.html" className="cta">Resume</a>
       </div>
     </nav>
