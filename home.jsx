@@ -123,6 +123,9 @@ function NowSection() {
           </div>
         )}
       </div>
+      <div style={{ marginTop: 36, textAlign: "center" }}>
+        <a href="now.html" className="btn">See full Now page →</a>
+      </div>
     </section>);
 
 }
