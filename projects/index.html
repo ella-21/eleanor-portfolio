@@ -20,25 +20,27 @@
 <script type="text/babel" src="../shared.jsx"></script>
 <script type="text/babel">
 
-const { useEffect } = React;
+const { useEffect, useState } = React;
 const D = window.SITE_DATA;
 
 function App() {
   useReveal();
+  const [expanded, setExpanded] = useState(null);
+
   return (
     <>
       <Nav current="projects" />
       <main className="page">
         <header className="page-head">
           <div className="crumb"><a href="/eleanor-portfolio/">Home</a> <span>/</span> <span>Projects</span></div>
-          <h1>Launches,<br /><em>segments,</em><br />seasons.</h1>
+          <h1>Selected Case Studies</h1>
           <p className="sub">Selected work across GTM strategy, segmentation, launch ops, and analytics-driven storytelling.</p>
         </header>
 
         <section className="section">
           <div className="proj-list" data-reveal>
             {D.projects.map((project, i) =>
-              <div className="proj-row" key={i}>
+              <div className={`proj-row ${expanded === i ? "expanded" : ""}`} key={i} onClick={() => setExpanded(expanded === i ? null : i)}>
                 <div className="num">{String(i + 1).padStart(2, "0")}</div>
                 <div>
                   <h3>{project.title}</h3>
@@ -49,7 +51,38 @@ function App() {
                   </div>
                 </div>
                 <p className="blurb">{project.blurb}</p>
-                <div className="arrow">→</div>
+                <div className="arrow">{expanded === i ? "×" : "→"}</div>
+
+                {expanded === i && (
+                  <div className="detail">
+                    {project.methodology && (
+                      <>
+                        <div className="label">Methodology</div>
+                        <div>
+                          <p style={{ margin: "0 0 16px", fontSize: 15, lineHeight: 1.6 }}>{project.methodology}</p>
+                        </div>
+                      </>
+                    )}
+                    {project.outcomes && (
+                      <>
+                        <div className="label">Outcomes</div>
+                        <ul>
+                          {project.outcomes.map((o, j) => <li key={j}>{o}</li>)}
+                        </ul>
+                      </>
+                    )}
+                    {project.caseStudy && (
+                      <>
+                        <div className="label">Case study</div>
+                        <div>
+                          <a href={project.caseStudy} target="_blank" className="btn outline" style={{ display: "inline-flex", marginTop: 8 }}>
+                            Download PDF →
+                          </a>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                )}
               </div>
             )}
           </div>

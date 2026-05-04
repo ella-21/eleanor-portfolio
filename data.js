@@ -97,6 +97,14 @@ window.SITE_DATA = {
       tools: ["R", "Clustering", "Behavioral data", "GTM strategy"],
       viz: "segments",
       brand: "Vail Resorts",
+      methodology: "K-Prototypes clustering on 1M customer records per year (FY23–FY25), engineered from 75M transactions. Features captured engagement, resort breadth, and lesson intensity across both numerical and categorical variables.", 
+      outcomes: [
+        "Identified 5 distinct skier personas, moving from demographic assumptions to behavioral reality",
+        "Largest segment: Lesson-focused Youngsters (29%) — avg age 8.8",
+        "Key rec: Shift Slope Fanatics (11.6%) to Specialty Workshops to address 'too advanced' drop-off",
+        "Primary opportunity: nurture 29% of young beginners into lifelong Slope Fanatics",
+      ],
+      caseStudy: "/eleanor-portfolio/assets/Vail Poster.pdf",
     },
     {
       tag: "B2B Market Segmentation",
@@ -106,6 +114,13 @@ window.SITE_DATA = {
       tools: ["R", "Segmentation", "B2B GTM", "Cross-sell"],
       viz: "bars",
       brand: "EverCommerce",
+      methodology:"Three logistic regression models were built to identify the highest-propensity customers for cross-selling Market Hardware, Customer Lobby, and Listen360. Each PaySimple-only customer was scored with a product-specific adoption probability, and the top 1,000 prospects per product were selected for targeting.",
+      outcomes: [
+        "Targeted approach yielded ~7.5% conversion vs ~1% firehose",
+        "Proposed approach generated $375K revenue vs $50K — 33.5x more profitable",
+        "Identified top 1,000 high-propensity prospects per product from PaySimple-only customer base",
+        "Key finding: industry vertical and org size are primary adoption drivers across all 3 products",
+      ],
     },
     {
       tag: "GTM Playbook",
@@ -144,13 +159,20 @@ window.SITE_DATA = {
       brand: "Sleep Study",
     },
     {
-      tag: "Marketing Automation",
+      tag: "Marketing & Operations",
       status: "Brock USA",
-      title: "Lifecycle email automation",
-      blurb: "Designed and shipped a lifecycle email automation program for Brock USA, mapping triggers to buyer-journey stages so sales got warmer leads and customers got the right message at the right moment.",
-      tools: ["Lifecycle marketing", "Automation", "Segmentation", "Copywriting"],
+      title: "Email automation",
+      blurb: "Conducted platform research and vendor analysis to identify an email management solution that would streamline Brock USA's marketing operations and reduce manual overhead across lifecycle communications.",
+      tools: ["Operations", "Automation", "Segmentation"],
       viz: "calendar",
       brand: "Brock USA",
+      methodology: "Researched and evaluated 5–6 email management platforms through a structured competitive analysis, assessing each against Brock USA's operational requirements to deliver a final platform recommendation.",
+      outcomes: [ 
+        "Recommended Hiver over 4 competitors — 33.5x more cost-efficient than next-best option (Front).",
+        "Hiver selected for unlimited workflows, HubSpot integration, and 24/7 support at $55/user/month with 40% EoQ discount.",
+        "Delivered a 90-day phased implementation roadmap covering setup, automation, and optimization",
+      ],
+      caseStudy: "/eleanor-portfolio/assets/Brock USA_Email_Management_Recommendation.pdf",
     },
   ],
   education: [
