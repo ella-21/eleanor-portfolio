@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 <div id="root"></div>
@@ -16,8 +16,8 @@
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-<script src="data.js"></script>
-<script type="text/babel" src="shared.jsx"></script>
+<script src="../data.js"></script>
+<script type="text/babel" src="../shared.jsx"></script>
 <script type="text/babel">
 const { useState, useEffect } = React;
 const D = window.SITE_DATA;
@@ -49,7 +49,7 @@ function App() {
       <Nav current="career"/>
       <main className="page">
         <header className="page-head">
-          <div className="crumb"><a href="index.html">Home</a> <span>/</span> <span>Career</span></div>
+          <div className="crumb"><a href="/">Home</a> <span>/</span> <span>Career</span></div>
           <h1>Five years,<br/>three teams,<br/><em>one rhythm.</em></h1>
           <p className="sub">From lifecycle marketing to seasonal launches to product analytics. Every role taught me a different way to make brand and data show up in the same room.</p>
         </header>
@@ -66,8 +66,8 @@ function App() {
           <div className="cta-block">
             <h3>Want the <em>one-pager?</em></h3>
             <div style={{display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap"}}>
-              <a href="resume.html" className="btn">View resume →</a>
-              <a href="projects.html" className="btn outline">See projects</a>
+              <a href="/resume" className="btn">View resume →</a>
+              <a href="/projects" className="btn outline">See projects</a>
             </div>
           </div>
         </section>

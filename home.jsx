@@ -42,7 +42,7 @@ function AboutPreview() {
         <div className="body" data-reveal>
           <p>{D.about[0]}</p>
           <p>{D.about[2]}</p>
-          <p style={{ marginTop: 32 }}><a href="about.html" className="btn outline">Read the longer version →</a></p>
+          <p style={{ marginTop: 32 }}><a href="/about" className="btn outline">Read the longer version →</a></p>
         </div>
         <div className="about-tiles" data-reveal>
           <div className="tile t-run">
@@ -81,7 +81,7 @@ function WorkPreview() {
       </div>
       <div className="work-list">
         {top.map((p, i) =>
-        <a href="projects.html" key={i} className="work-card" data-reveal>
+        <a href="/projects" key={i} className="work-card" data-reveal>
             <div className="arrow">↗</div>
             <div className="pviz">
               <ProjViz kind={p.viz} brand={p.brand} />
@@ -98,7 +98,7 @@ function WorkPreview() {
         )}
       </div>
       <div style={{ marginTop: 40, textAlign: "center" }}>
-        <a href="projects.html" className="btn">See all projects →</a>
+        <a href="/projects" className="btn">See all projects →</a>
       </div>
     </section>);
 
@@ -145,7 +145,7 @@ function CTA() {
         <h3>Building something <em>worth telling</em> a story about?</h3>
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
           <a href="mailto:eleanor.lansner@gmail.com" className="btn">Get in touch →</a>
-          <a href="resume.html" className="btn outline">Download resume</a>
+          <a href="/resume" className="btn outline">Download resume</a>
         </div>
       </div>
     </section>);

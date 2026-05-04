@@ -23,16 +23,16 @@ function Nav({ current }) {
   }, []);
   return (
     <nav className="nav" style={scrolled ? { boxShadow: "0 4px 20px -8px rgba(20,17,13,.08)" } : {}}>
-      <a href="index.html" className="mark">
+      <a href="/" className="mark">
         <span className="glyph"></span>
         <span>Eleanor L.</span>
       </a>
       <div className="links">
-        <a href="about.html" className={current === "about" ? "active" : ""}>About</a>
-        <a href="career.html" className={current === "career" ? "active" : ""}>Career</a>
-        <a href="projects.html" className={current === "projects" ? "active" : ""}>Projects</a>
+        <a href="/about" className={current === "about" ? "active" : ""}>About</a>
+        <a href="/career" className={current === "career" ? "active" : ""}>Career</a>
+        <a href="/projects" className={current === "projects" ? "active" : ""}>Projects</a>
         <a href="/now" className={current === "now" ? "active" : ""}>Now</a>
-        <a href="resume.html" className="cta">Resume</a>
+        <a href="/resume" className="cta">Resume</a>
       </div>
     </nav>
   );
@@ -77,9 +77,9 @@ function Footer() {
         <div>
           <h4>Elsewhere</h4>
           <ul>
-            <li><a href="resume.html"><span>One-page resume</span><span className="ar">→</span></a></li>
-            <li><a href="projects.html"><span>Project archive</span><span className="ar">→</span></a></li>
-            <li><a href="about.html"><span>About</span><span className="ar">→</span></a></li>
+            <li><a href="/resume"><span>One-page resume</span><span className="ar">→</span></a></li>
+            <li><a href="/projects"><span>Project archive</span><span className="ar">→</span></a></li>
+            <li><a href="/about"><span>About</span><span className="ar">→</span></a></li>
           </ul>
         </div>
       </div>
