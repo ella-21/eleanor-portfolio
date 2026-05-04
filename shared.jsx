@@ -23,16 +23,16 @@ function Nav({ current }) {
   }, []);
   return (
     <nav className="nav" style={scrolled ? { boxShadow: "0 4px 20px -8px rgba(20,17,13,.08)" } : {}}>
-      <a href="/" className="mark">
+      <a href="/eleanor-portfolio/" className="mark">
         <span className="glyph"></span>
         <span>Eleanor L.</span>
       </a>
       <div className="links">
-        <a href="/about" className={current === "about" ? "active" : ""}>About</a>
-        <a href="/career" className={current === "career" ? "active" : ""}>Career</a>
-        <a href="/projects" className={current === "projects" ? "active" : ""}>Projects</a>
-        <a href="/now" className={current === "now" ? "active" : ""}>Now</a>
-        <a href="/resume" className="cta">Resume</a>
+        <a href="/eleanor-portfolio/about/" className={current === "about" ? "active" : ""}>About</a>
+        <a href="/eleanor-portfolio/career/" className={current === "career" ? "active" : ""}>Career</a>
+        <a href="/eleanor-portfolio/projects/" className={current === "projects" ? "active" : ""}>Projects</a>
+        <a href="/eleanor-portfolio/now/" className={current === "now" ? "active" : ""}>Now</a>
+        <a href="/eleanor-portfolio/resume/" className="cta">Resume</a>
       </div>
     </nav>
   );
@@ -77,9 +77,9 @@ function Footer() {
         <div>
           <h4>Elsewhere</h4>
           <ul>
-            <li><a href="/resume"><span>One-page resume</span><span className="ar">→</span></a></li>
-            <li><a href="/projects"><span>Project archive</span><span className="ar">→</span></a></li>
-            <li><a href="/about"><span>About</span><span className="ar">→</span></a></li>
+            <li><a href="/eleanor-portfolio/resume/"><span>One-page resume</span><span className="ar">→</span></a></li>
+            <li><a href="/eleanor-portfolio/projects/"><span>Project archive</span><span className="ar">→</span></a></li>
+            <li><a href="/eleanor-portfolio/about/"><span>About</span><span className="ar">→</span></a></li>
           </ul>
         </div>
       </div>
