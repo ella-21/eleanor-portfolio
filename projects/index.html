@@ -31,33 +31,33 @@ function App() {
       <main className="page">
         <header className="page-head">
           <div className="crumb"><a href="/eleanor-portfolio/">Home</a> <span>/</span> <span>Projects</span></div>
-          <h1>Projects that show how I work.</h1>
+          <h1>Launches,<br /><em>segments,</em><br />seasons.</h1>
           <p className="sub">Selected work across GTM strategy, segmentation, launch ops, and analytics-driven storytelling.</p>
         </header>
 
         <section className="section">
-          <div className="projects-grid" data-reveal>
+          <div className="proj-list" data-reveal>
             {D.projects.map((project, i) =>
-              <article className="project-card" key={i}>
-                <div className="pviz"><ProjViz kind={project.viz} brand={project.brand} /></div>
-                <div className="project-meta">
-                  <span>{project.tag}</span>
-                  <span>{project.status}</span>
+              <div className="proj-row" key={i}>
+                <div className="num">{String(i + 1).padStart(2, "0")}</div>
+                <div>
+                  <h3>{project.title}</h3>
+                  <div className="meta">
+                    <span>{project.tag}</span>
+                    <span className="dot"></span>
+                    <span>{project.brand}</span>
+                  </div>
                 </div>
-                <h3>{project.title}</h3>
-                <p>{project.blurb}</p>
-                <div className="project-tools">
-                  {project.tools.map((tool, j) => <span className="project-tool" key={j}>{tool}</span>)}
-                </div>
-                <div className="project-brand">{project.brand}</div>
-              </article>
+                <p className="blurb">{project.blurb}</p>
+                <div className="arrow">→</div>
+              </div>
             )}
           </div>
         </section>
 
         <section className="section" style={{ borderBottom: 0 }}>
           <div className="cta-block">
-            <h3>Want the <em>short version?</em></h3>
+            <h3>Want the <em>one-pager?</em></h3>
             <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
               <a href="/eleanor-portfolio/resume/" className="btn">View resume →</a>
               <a href="/eleanor-portfolio/about/" className="btn outline">About</a>
