@@ -1,59 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Eleanor Portfolio</title>
-    <style>
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background: #f7fafc;
-        color: #111827;
-      }
-      .page {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 36px 24px;
-      }
-      header {
-        margin-bottom: 24px;
-      }
-      a {
-        color: #1d4ed8;
-        text-decoration: none;
-      }
-      .card {
-        background: white;
-        border-radius: 20px;
-        padding: 24px;
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-      }
-      .crumb {
-        margin-bottom: 18px;
-        color: #4b5563;
-      }
-    </style>
-  </head>
-  <body>
-    <main class="page">
-      <div class="crumb"><a href="index.html">Home</a> / About</div>
-      <div class="card">
-        <header>
-          <h1>About Eleanor</h1>
-          <p>Use this page to introduce yourself, your skills, and what makes your portfolio unique.</p>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About, Eleanor Lansner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="data.js"></script>
+<script type="text/babel" src="shared.jsx"></script>
+<script type="text/babel">
+
+const { useEffect } = React;
+const D = window.SITE_DATA;
+
+function App() {
+  useReveal();
+  return (
+    <>
+      <Nav current="about" />
+      <main className="page">
+        <header className="page-head">
+          <div className="crumb"><a href="index.html">Home</a> <span>/</span> <span>About</span></div>
+          <h1>Marketer.<br /><em>Runner.</em><br />Builder of things<br />worth showing up for.</h1>
+          <p className="sub">A long-form bio, in three movements: how I got here, what I do, and what I'm chasing next.</p>
         </header>
-        <section>
-          <h2>Who I am</h2>
-          <p>Share your professional background, the types of work you enjoy, and the value you bring to projects.</p>
+
+        <section className="edit-split">
+          <h2 className="es-head">New York built,<br /><em>Colorado</em> sharpened.</h2>
+          <div className="es-body" data-reveal>
+            <p>I'm a product marketer who fell for the craft at the intersection of data, consumer behavior, and commercial outcome. Four years at Trustpilot taught me how a launch actually moves: the hand-off between Design and Marketing, the slack message that saves a sprint, the sales deck that makes a number stick. I love that work, and I'm good at the rhythm of it.</p>
+            <p>But the best stories I've ever told were rooted in real behavior, not gut feel. So I went back to school for the analytical foundation underneath, an MS in Business Analytics at CU Boulder. ML, segmentation, performance modeling. Now I'm back in NYC, bringing that lens to the launch calendar.</p>
+            <p>I think the next great consumer brands will be built by people who can hold both lanes at once: the brand instinct that makes a campaign feel inevitable, and the analytical spine that tells you why it worked. That's the lane I'm building toward.</p>
+          </div>
+          <div className="es-photo" data-reveal>
+            <img src="assets/portrait.png" alt="Eleanor" />
+          </div>
         </section>
-        <section style="margin-top: 20px;">
-          <h2>What I do</h2>
-          <p>Describe your key skills, technologies you use, and the problems you solve for clients or employers.</p>
+
+        <section className="pull-quote" data-reveal>
+          <blockquote>
+            “Brand instinct without data is a <em>guess.</em> Data without brand instinct is a <em>dashboard.</em>”
+          </blockquote>
+          <div className="attr">A working philosophy</div>
         </section>
-      </div>
-    </main>
-  </body>
+
+        <section className="edit-split head-photo" style={{ borderTop: "1px solid var(--rule)", paddingTop: 80 }}>
+          <h2 className="es-head"><em>Runner</em> first.</h2>
+          <div className="es-photo" data-reveal style={{ background: "#000" }}>
+            <img src="assets/4tg.jpg" alt="4 The Girls Jog Club" style={{position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover"}} />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.55) 100%)" }}></div>
+            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "flex-end", justifyContent: "flex-start", fontFamily: "var(--display)", fontStyle: "italic", fontSize: "clamp(40px, 6vw, 84px)", color: "#fff", textAlign: "left", lineHeight: 0.95, padding: "32px 40px", textShadow: "0 2px 16px rgba(0,0,0,.4)" }}>
+              4 The Girls Jog Club
+            </div>
+          </div>
+          <div className="es-body" data-reveal>
+            <p>Running is where the rest of my life clicks into place. I'm currently training for the Chicago Marathon, logging long miles along the Hudson before the rest of New York wakes up. There's a discipline in marathon training that maps directly onto how I work: consistent inputs, honest data, patience with the long arc.</p>
+            <p>I'm brining a Boulder based women only run club called, <strong style={{ fontFamily: "\"Instrument Serif\"" }}>4 The Girls Jog Club</strong> in NYC because I wanted the kind of running community I couldn't find: women showing up for each other at 7am, talking about ambition between miles, building something durable. It's the same instinct I bring to a launch plan: gather the right people, set the pace, ship the season.</p>
+            <p>Off the clock you'll also find me on a wall, on a flight somewhere new, or buried in a stack of books on consumer behavior. Currently reading <em>Running with the Buffaloes</em>; next trip is the Dolomites in March 2027.</p>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="section-head">
+            <span className="num">A / Education</span>
+            <h2>Where I <em>learned</em> the rest.</h2>
+          </div>
+          <div className="edu" data-reveal>
+            {D.education.map((e, i) =>
+            <div className="edu-card" key={i}>
+                <div className="when">{e.when}</div>
+                <h4>{e.degree}</h4>
+                <div className="school">{e.school}</div>
+                <div className="focus">{e.focus}</div>
+              </div>
+            )}
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="section-head">
+            <span className="num">B / Skills</span>
+            <h2>What I <em>actually</em> do.</h2>
+          </div>
+          <div data-reveal>
+            {Object.entries(D.skills).map(([cluster, items]) =>
+            <div className="cluster" key={cluster}>
+                <div className="cluster-label">{cluster}</div>
+                <div className="skills-row">
+                  {items.map((s, i) => <span className="skill" key={i}>{s}</span>)}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+
+        <section className="section" style={{ borderBottom: 0 }}>
+          <div className="cta-block">
+            <h3>Want the <em>short version?</em></h3>
+            <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+              <a href="resume.html" className="btn">View resume →</a>
+              <a href="career.html" className="btn outline">Career detail</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>);
+
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
 </html>
