@@ -1401,10 +1401,20 @@ img { display: block; max-width: 100%; }
 .edit-split.head-photo .es-body {
   grid-column: 1;
   max-width: 720px;
-  columns: 2;
-  column-gap: 48px;
+  columns: unset;
+  column-gap: unset;
 }
-.edit-split.head-photo .es-body p { break-inside: avoid; }
+.edit-split.head-photo .es-body p { 
+  break-inside: avoid;
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 17px;
+}
+.edit-split.head-photo .es-body p:first-of-type {
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 17px;
+}
 @media (max-width: 720px) { .edit-split.head-photo .es-body { columns: 1; } }
 
 /* Flip variant — photo on left */
