@@ -130,7 +130,7 @@ window.SITE_DATA = {
       tools: ["Launch ops", "Positioning", "Sales enablement", "Cross-functional"],
       viz: "calendar",
       brand: "Trustpilot",
-      caseStudy: "/workspaces/eleanor-portfolio/assets/Trustpilot_Beta_Case_Study.pptx.pdf",
+      caseStudy: "/eleanor-portfolio/assets/Trustpilot_Beta_Case_Study.pptx.pdf",
     },
     {
       tag: "Consumer Insight",
