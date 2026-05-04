@@ -104,35 +104,13 @@ function App() {
           </div>
         </section>
 
-        <section className="section">
-          <div className="section-head">
-            <span className="num">C / Projects</span>
-            <h2>Selected projects that show the work.</h2>
-          </div>
-          <div className="projects-grid" data-reveal>
-            {D.projects.map((project, i) =>
-            <article className="project-card" key={i}>
-              <div className="project-meta">
-                <span>{project.tag}</span>
-                <span>{project.status}</span>
-              </div>
-              <h3>{project.title}</h3>
-              <p>{project.blurb}</p>
-              <div className="project-tools">
-                {project.tools.map((tool, j) => <span className="project-tool" key={j}>{tool}</span>)}
-              </div>
-              <div className="project-brand">{project.brand}</div>
-            </article>
-            )}
-          </div>
-        </section>
-
         <section className="section" style={{ borderBottom: 0 }}>
           <div className="cta-block">
             <h3>Want the <em>short version?</em></h3>
             <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
               <a href="resume.html" className="btn">View resume →</a>
               <a href="career.html" className="btn outline">Career detail</a>
+              <a href="projects.html" className="btn outline">Projects</a>
             </div>
           </div>
         </section>

@@ -27,72 +27,30 @@ function App() {
   useReveal();
   return (
     <>
-      <Nav current="about" />
+      <Nav current="projects" />
       <main className="page">
         <header className="page-head">
-          <div className="crumb"><a href="index.html">Home</a> <span>/</span> <span>About</span></div>
-          <h1>Runner. Climber.<br /><em>Marketer who</em><br />loves the data.</h1>
-          <p className="sub">A long-form bio, in three movements: how I got here, what I do, and what I'm chasing next.</p>
+          <div className="crumb"><a href="index.html">Home</a> <span>/</span> <span>Projects</span></div>
+          <h1>Projects that show how I work.</h1>
+          <p className="sub">Selected work across GTM strategy, segmentation, launch ops, and analytics-driven storytelling.</p>
         </header>
 
-        <section className="edit-split" style={{ fontFamily: "\"Instrument Serif\"" }}>
-          <h2 className="es-head">New York built,<br /><em>Colorado</em> sharpened.</h2>
-          <div className="es-body" data-reveal>
-            <p>Four years at Trustpilot taught me how a launch actually moves: the hand-off between Design and Marketing, the slack message that saves a sprint, the sales deck that makes a number stick. I love that work.</p>
-            <p>But the best stories I've told were always rooted in real behavior. So I went back to school for the analytical foundation underneath, and I'm bringing it back to the launch calendar.</p>
-          </div>
-          <div className="es-photo" data-reveal>
-            <img src="assets/portrait.png" alt="Eleanor" />
-          </div>
-        </section>
-
-        <section className="section" style={{ borderTop: "1px solid var(--rule)", paddingTop: 60 }}>
-          <div className="story-grid" data-reveal>
-            <div className="story-cell hero-photo tall">
-              <span className="story-overlay">Our Story</span>
-            </div>
-            <div className="story-cell warm" style={{ fontFamily: "\"Instrument Serif\"" }}>2019 — first marketing internship</div>
-            <div className="story-cell dark short">2021 — Trustpilot, NYC</div>
-            <div className="story-cell snow">2025 — CU Boulder</div>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr 1fr 0.6fr", gap: 16, marginTop: 8 }}>
-            <div></div>
-            <div className="story-caption"><span className="yr">2019</span>First marketing role at an early-stage start-up; learned that consumer insight is the only briefing that matters.</div>
-            <div className="story-caption"><span className="yr">2021 — 2025</span>Four years at Trustpilot, six-plus seasonal launches shipped, and a promotion from Coordinator to PMM.</div>
-            <div className="story-caption"><span className="yr">2026</span>MSc Business Analytics from CU Boulder. Back in NYC.</div>
-          </div>
-        </section>
-
         <section className="section">
-          <div className="section-head">
-            <span className="num">A / Education</span>
-            <h2>Where I <em>learned</em> the rest.</h2>
-          </div>
-          <div className="edu" data-reveal>
-            {D.education.map((e, i) =>
-            <div className="edu-card" key={i}>
-                <div className="when">{e.when}</div>
-                <h4>{e.degree}</h4>
-                <div className="school">{e.school}</div>
-                <div className="focus">{e.focus}</div>
-              </div>
-            )}
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="section-head">
-            <span className="num">B / Skills</span>
-            <h2>What I <em>actually</em> do.</h2>
-          </div>
-          <div data-reveal>
-            {Object.entries(D.skills).map(([cluster, items]) =>
-            <div className="cluster" key={cluster}>
-                <div className="cluster-label">{cluster}</div>
-                <div className="skills-row">
-                  {items.map((s, i) => <span className="skill" key={i}>{s}</span>)}
+          <div className="projects-grid" data-reveal>
+            {D.projects.map((project, i) =>
+              <article className="project-card" key={i}>
+                <div className="pviz"><ProjViz kind={project.viz} brand={project.brand} /></div>
+                <div className="project-meta">
+                  <span>{project.tag}</span>
+                  <span>{project.status}</span>
                 </div>
-              </div>
+                <h3>{project.title}</h3>
+                <p>{project.blurb}</p>
+                <div className="project-tools">
+                  {project.tools.map((tool, j) => <span className="project-tool" key={j}>{tool}</span>)}
+                </div>
+                <div className="project-brand">{project.brand}</div>
+              </article>
             )}
           </div>
         </section>
@@ -102,14 +60,13 @@ function App() {
             <h3>Want the <em>short version?</em></h3>
             <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
               <a href="resume.html" className="btn">View resume →</a>
-              <a href="career.html" className="btn outline">Career detail</a>
+              <a href="about.html" className="btn outline">About</a>
             </div>
           </div>
         </section>
       </main>
       <Footer />
     </>);
-
 }
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 </script>

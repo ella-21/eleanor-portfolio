@@ -38,7 +38,7 @@ function App() {
         <section className="edit-split">
           <h2 className="es-head">New York built,<br /><em>Colorado</em> sharpened.</h2>
           <div className="es-body" data-reveal>
-            <p>I'm a product marketer who fell for the craft at the intersection of data, consumer behavior, and commercial outcome. Four years at Trustpilot taught me how a launch actually moves: the hand-off between Design and Marketing, the slack message that saves a sprint, the sales deck that makes a number stick. I love that work, and I'm good at the rhythm of it.</p>
+            <p>I'm a product marketer who leverages data and consumer behavior to craft relevent GTM stratagies that drive commercial and strategic outcome. Four years at Trustpilot taught me how to build a GTM plan actually drives adoptoin and revenue.</p>
             <p>But the best stories I've ever told were rooted in real behavior, not gut feel. So I went back to school for the analytical foundation underneath, an MS in Business Analytics at CU Boulder. ML, segmentation, performance modeling. Now I'm back in NYC, bringing that lens to the launch calendar.</p>
             <p>I think the next great consumer brands will be built by people who can hold both lanes at once: the brand instinct that makes a campaign feel inevitable, and the analytical spine that tells you why it worked. That's the lane I'm building toward.</p>
           </div>
@@ -104,35 +104,13 @@ function App() {
           </div>
         </section>
 
-        <section className="section">
-          <div className="section-head">
-            <span className="num">C / Projects</span>
-            <h2>Selected projects that show the work.</h2>
-          </div>
-          <div className="projects-grid" data-reveal>
-            {D.projects.map((project, i) =>
-            <article className="project-card" key={i}>
-              <div className="project-meta">
-                <span>{project.tag}</span>
-                <span>{project.status}</span>
-              </div>
-              <h3>{project.title}</h3>
-              <p>{project.blurb}</p>
-              <div className="project-tools">
-                {project.tools.map((tool, j) => <span className="project-tool" key={j}>{tool}</span>)}
-              </div>
-              <div className="project-brand">{project.brand}</div>
-            </article>
-            )}
-          </div>
-        </section>
-
         <section className="section" style={{ borderBottom: 0 }}>
           <div className="cta-block">
             <h3>Want the <em>short version?</em></h3>
             <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
               <a href="resume.html" className="btn">View resume →</a>
               <a href="career.html" className="btn outline">Career detail</a>
+              <a href="projects.html" className="btn outline">Projects</a>
             </div>
           </div>
         </section>
