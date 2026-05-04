@@ -71,7 +71,6 @@ function Footer() {
           <ul>
             <li><a href="mailto:eleanor.lansner@gmail.com"><span>eleanor.lansner@gmail.com</span><span className="ar">→</span></a></li>
             <li><a href="https://linkedin.com/in/eleanor-lansner" target="_blank"><span>LinkedIn</span><span className="ar">↗</span></a></li>
-            <li><a href="tel:+19174989731"><span>(917) 498-9731</span><span className="ar">→</span></a></li>
           </ul>
         </div>
         <div>
