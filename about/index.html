@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 <div id="root"></div>
@@ -16,8 +16,8 @@
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-<script src="data.js"></script>
-<script type="text/babel" src="shared.jsx"></script>
+<script src="../data.js"></script>
+<script type="text/babel" src="../shared.jsx"></script>
 <script type="text/babel">
 
 const { useEffect } = React;
@@ -44,7 +44,7 @@ function App() {
             <p>I believe that data is the bridge between a good idea and a great product. By combining my background in product strategy with the technical rigor of business analytics, I aim to build experiences that are as intuitive as they are evidence-based.</p>
           </div>
           <div className="es-photo" data-reveal>
-            <img src="assets/portrait.png" alt="Eleanor" />
+            <img src="../assets/portrait.png" alt="Eleanor" />
           </div>
         </section>
 
@@ -58,7 +58,7 @@ function App() {
         <section className="edit-split head-photo" style={{ borderTop: "1px solid var(--rule)", paddingTop: 80, paddingBottom: 0 }}>
           <h2 className="es-head"><em>Runner</em> first.</h2>
           <div className="es-photo" data-reveal style={{ background: "#000" }}>
-            <img src="assets/4tg.jpg" alt="4 The Girls Jog Club" style={{position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover"}} />
+            <img src="../assets/4tg.jpg" alt="4 The Girls Jog Club" style={{position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover"}} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.55) 100%)" }}></div>
             <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "flex-end", justifyContent: "flex-start", fontFamily: "var(--display)", fontStyle: "italic", fontSize: "clamp(40px, 6vw, 84px)", color: "#fff", textAlign: "left", lineHeight: 0.95, padding: "32px 40px", textShadow: "0 2px 16px rgba(0,0,0,.4)" }}>
               4 The Girls Jog Club
@@ -73,7 +73,7 @@ function App() {
 </p>
           </div>
           <div className="es-photo" data-reveal>
-            <img src="assets/Boulderthon.jpg" alt="Eleanor on a run" />
+            <img src="../assets/Boulderthon.jpg" alt="Eleanor on a run" />
           </div>
         </section>
 
